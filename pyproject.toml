@@ -11,7 +11,14 @@ dependencies = [
     "python-dotenv>=1.0.0",
     "openai>=1.6.0",
     "pyarrow>=22.0.0",
+]
+
+
+[dependency-groups]
+dev = [
     "pytest>=9.0.1",
+    "pytest-asyncio",
+    # 其他测试 / 开发工具
 ]
 
 # 将 src 布局的包（src/milvus）作为可安装包，并提供命令行入口

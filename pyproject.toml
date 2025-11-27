@@ -3,7 +3,7 @@ name = "graphrag-milvus-manager"
 version = "0.1.0"
 description = "GraphRAG Milvus 管理工具"
 readme = "README.md"
-requires-python = ">=3.12,<3.13"
+requires-python = ">=3.11,<3.12"
 dependencies = [
     "environs>=14.5.0",
     "pandas>=2.3.3",

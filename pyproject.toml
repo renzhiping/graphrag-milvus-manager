@@ -1,0 +1,29 @@
+[project]
+name = "graphrag-milvus-manager"
+version = "0.1.0"
+description = "GraphRAG Milvus 管理工具"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "environs>=14.5.0",
+    "pandas>=2.3.3",
+    "pymilvus>=2.6.4",
+    "python-dotenv>=1.0.0",
+    "openai>=1.6.0",
+    "pyarrow>=22.0.0",
+    "pytest>=9.0.1",
+]
+
+# 将 src 布局的包（src/milvus）作为可安装包，并提供命令行入口
+[project.scripts]
+milvus-reset = "milvus.scripts.milvus_reset:main"
+milvus-workflow = "milvus.scripts.milvus_workflow:main"
+milvus-import-all = "milvus.scripts.milvus_import_all:main"
+milvus-create-collections = "milvus.scripts.milvus_create_collections:main"
+
+[build-system]
+requires = ["hatchling>=1.27.0"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+packages = ["src/milvus"]
